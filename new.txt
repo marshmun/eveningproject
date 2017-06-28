@@ -1,0 +1,20 @@
+createdb todoList;
+psql todoList;
+
+create table todos (id serial primary key, title varchar not null, details varchar null, priority intger '1' not null, created_at datetime not null, completed_at datetime null );
+
+insert into todos(title, priority, created_at) values ('Wash clothing', 'priority 1', '2017-06-28 10:00:00');
+
+select * from todos;
+SELECT title FROM todos WHERE created_at IS NULL;
+
+select* from todos;
+select prority from todos where priority > 1;
+
+update todos from id 1 set completed_at = '2017-06-28 10:01:00'
+
+delete from todos where completed_at is not null
+
+
+
+
